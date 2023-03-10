@@ -14,7 +14,7 @@ import (
 	"google.golang.org/grpc/peer"
 
 	"github.com/gorilla/mux"
-	"github.com/jpillora/ipfilter"
+	"github.com/scanoss/ipfilter"
 	"github.com/stretchr/testify/assert"
 )
 
