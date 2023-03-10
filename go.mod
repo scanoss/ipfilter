@@ -1,4 +1,4 @@
-module github.com/scanoss/ipfilter
+module github.com/scanoss/ipfilter/v2
 
 go 1.16
 
