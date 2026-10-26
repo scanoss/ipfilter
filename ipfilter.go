@@ -268,9 +268,9 @@ func (m *ipFilterMiddleware) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	} else {
 		remoteIP, _, _ = net.SplitHostPort(r.RemoteAddr)
 	}
-	allowed := m.IPFilter.Allowed(remoteIP)
+	allowed := m.Allowed(remoteIP)
 	// special case localhost ipv4
-	if !allowed && remoteIP == ipv6LoopBack && m.IPFilter.Allowed("127.0.0.1") {
+	if !allowed && remoteIP == ipv6LoopBack && m.Allowed("127.0.0.1") {
 		allowed = true
 	}
 	if !allowed {
