@@ -1,6 +1,7 @@
 package ipfilter_test
 
 import (
+	"context"
 	"log"
 	"net"
 	"net/http"
@@ -8,7 +9,6 @@ import (
 	"os"
 	"testing"
 
-	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/peer"
